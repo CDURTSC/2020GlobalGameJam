@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SewPoint : MonoBehaviour
+public class OzoneLine : MonoBehaviour
 {
-    public int sewPointSideNumber;
-    public bool connected = false;
-
     // Start is called before the first frame update
     void Start()
     {

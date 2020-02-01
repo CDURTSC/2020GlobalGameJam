@@ -46,3 +46,4 @@ MonoBehaviour:
   keyToInteract: 323
   point1: {fileID: 0}
   point2: {fileID: 0}
+  line: {fileID: 3646256230440634640, guid: d901b0471d6aae94a8a91688f4c83f9f, type: 3}

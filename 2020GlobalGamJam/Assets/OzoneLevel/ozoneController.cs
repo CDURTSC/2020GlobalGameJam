@@ -9,6 +9,8 @@ public class ozoneController : MonoBehaviour
     public SewPoint point1;
     public SewPoint point2;
 
+    public OzoneLine line;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +42,15 @@ public class ozoneController : MonoBehaviour
                 {
                     point2 = hit.transform.gameObject.GetComponent<SewPoint>();
 
-                    if(point1.sewPointNumber == point2.sewPointNumber && point1 != point2 && !point1.connected && !point2.connected)
+                    if(point1.sewPointSideNumber != point2.sewPointSideNumber && point1 != point2)
                     {
                         point1.connected = true;
                         point2.connected = true;
-                        Debug.DrawLine(point1.transform.position, point2.transform.position, Color.red, 10.0f);
+
+                        OzoneLine newLine = Instantiate(line);
+                        
+                        newLine.GetComponent<LineRenderer>().SetPosition(0, point1.transform.position);
+                        newLine.GetComponent<LineRenderer>().SetPosition(1, point2.transform.position);
                     }
 
                     //Reset Points
