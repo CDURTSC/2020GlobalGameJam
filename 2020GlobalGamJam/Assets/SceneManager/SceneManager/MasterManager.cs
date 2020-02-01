@@ -29,14 +29,14 @@ public class MasterManager : MonoBehaviour
     //Button Action to return to main menu
     public void ActionButton_MainMenu()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadScene(0);
     }
 
     //Timer to delay scene change based on animation length
     IEnumerator TimeChangedScene()
     {
         //Play some kind of animation here
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(.05f);
 
         // call the event
         AnimationTimeChange();
@@ -61,13 +61,15 @@ public class MasterManager : MonoBehaviour
 
     void ChangeScene()
     {
-        SceneManager.LoadSceneAsync(Random.Range(1,SceneManager.sceneCount));
+        int randomNum = Random.Range(1, SceneManager.sceneCountInBuildSettings - 1);
+        Debug.Log("Random number: " + randomNum);
+        SceneManager.LoadScene(randomNum);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         newLevelData = GameObject.Find("LevelData").GetComponent<LevelData>();
-        if (newLevelData!= null)
+        if (newLevelData != null)
             timeForLevel = newLevelData.levelTime;
         if (SceneManager.GetActiveScene().name != "MainMenu")
             StartLevelTimer();
