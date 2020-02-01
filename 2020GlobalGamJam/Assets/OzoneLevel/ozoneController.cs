@@ -30,34 +30,38 @@ public class ozoneController : MonoBehaviour
 
             if(hit.collider != null)
             {
-                //Get first point
-                if(point1 == null)
+                if(hit.transform.gameObject.tag == "SewPoint")
                 {
-                    point1 = hit.transform.gameObject.GetComponent<SewPoint>();
-
-                }
-       
-                //Get second point
-                else if(point2 == null)
-                {
-                    point2 = hit.transform.gameObject.GetComponent<SewPoint>();
-
-                    if(point1.sewPointSideNumber != point2.sewPointSideNumber && point1 != point2)
+                    //Get first point
+                    if (point1 == null)
                     {
-                        point1.connected = true;
-                        point2.connected = true;
+                        point1 = hit.transform.gameObject.GetComponent<SewPoint>();
 
-                        OzoneLine newLine = Instantiate(line);
-                        
-                        newLine.GetComponent<LineRenderer>().SetPosition(0, point1.transform.position);
-                        newLine.GetComponent<LineRenderer>().SetPosition(1, point2.transform.position);
                     }
 
-                    //Reset Points
-                    point1 = null;
-                    point2 = null;
+                    //Get second point
+                    else if (point2 == null)
+                    {
+                        point2 = hit.transform.gameObject.GetComponent<SewPoint>();
 
+                        if (point1.sewPointSideNumber != point2.sewPointSideNumber && point1 != point2)
+                        {
+                            point1.connected = true;
+                            point2.connected = true;
+
+                            OzoneLine newLine = Instantiate(line);
+
+                            newLine.GetComponent<LineRenderer>().SetPosition(0, point1.transform.position);
+                            newLine.GetComponent<LineRenderer>().SetPosition(1, point2.transform.position);
+                        }
+
+                        //Reset Points
+                        point1 = null;
+                        point2 = null;
+
+                    }
                 }
+
                 
             }
         }

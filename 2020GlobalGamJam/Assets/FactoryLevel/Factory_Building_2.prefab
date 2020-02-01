@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 507676844280437341}
   - component: {fileID: 507676844280437330}
   - component: {fileID: 507676844280437340}
+  - component: {fileID: 7313934554961296008}
   m_Layer: 9
   m_Name: Factory_Building_2
   m_TagString: Untagged
@@ -87,7 +88,7 @@ Transform:
   m_GameObject: {fileID: 507676844280437331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.28, y: 0.93, z: 1}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 507676844245714247}
   - {fileID: 507676843723395270}
@@ -162,6 +163,17 @@ MonoBehaviour:
   - {fileID: 507676844245714244}
   - {fileID: 507676843723395271}
   - {fileID: 507676844497013664}
+--- !u!210 &7313934554961296008
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507676844280437331}
+  m_Enabled: 1
+  m_SortingLayerID: 408383057
+  m_SortingLayer: 1
+  m_SortingOrder: 1
 --- !u!1 &507676844497013664
 GameObject:
   m_ObjectHideFlags: 0

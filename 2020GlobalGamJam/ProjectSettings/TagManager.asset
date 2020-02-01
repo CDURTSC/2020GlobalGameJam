@@ -45,3 +45,6 @@ TagManager:
   - name: Factory
     uniqueID: 408383057
     locked: 0
+  - name: SmokeStack
+    uniqueID: 895979029
+    locked: 0
