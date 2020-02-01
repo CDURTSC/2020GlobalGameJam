@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FactoryLevel/FactoryLevel.unity
     guid: d2b5b636983a50246a83167e48f45c6a
+  - enabled: 1
+    path: Assets/OzoneLevel/OzoneLevel.unity
+    guid: 768a91ffd5590634f9aeaf46ce721a1f
   m_configObjects: {}
